@@ -9,4 +9,7 @@
     <packaging>pom</packaging>
     <version>2019</version>
 
+    <modules>
+        <module>eventing-spring-amqp</module>
+    </modules>
 </project>
