@@ -2,6 +2,7 @@ package com.axxes.traineeship.eventing.amqp;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.util.ISO8601DateFormat;
+import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
@@ -17,6 +18,21 @@ import static com.fasterxml.jackson.databind.SerializationFeature.WRITE_DATES_AS
 public class AmqpConfig {
 
     //TODO configure beans to create an exchange, queue, and binding (hint: use BindingBuilder)
+
+    @Bean
+    public Exchange exchange() {
+        return new FanoutExchange("AXXES_EXCHANGE");
+    }
+
+    @Bean
+    public Queue queue() {
+        return new Queue("AXXES_QUEUE");
+    }
+
+    @Bean
+    public Binding binding(Exchange exchange, Queue queue) {
+        return BindingBuilder.bind(queue).to(exchange).with("").noargs();
+    }
 
     @Bean
     public ObjectMapper objectMapper() {
