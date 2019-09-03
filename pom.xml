@@ -11,5 +11,6 @@
 
     <modules>
         <module>eventing-spring-amqp</module>
+        <module>eventing-spring-events</module>
     </modules>
 </project>
