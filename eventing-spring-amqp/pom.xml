@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.axxes.traineeship</groupId>
-        <artifactId>eventing</artifactId>
-        <version>2019</version>
+        <groupId>com.axxes</groupId>
+        <artifactId>traineeship-java-eventing</artifactId>
+        <version>2020</version>
     </parent>
 
     <artifactId>eventing-spring-amqp</artifactId>
