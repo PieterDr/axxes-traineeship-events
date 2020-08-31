@@ -22,4 +22,12 @@ public class GenericEvent {
     public void setTimestamp(Date timestamp) {
         this.timestamp = timestamp;
     }
+
+    @Override
+    public String toString() {
+        return "GenericEvent{" +
+                "event='" + event + '\'' +
+                ", timestamp=" + timestamp +
+                '}';
+    }
 }
