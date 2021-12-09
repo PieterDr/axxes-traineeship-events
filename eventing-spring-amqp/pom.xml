@@ -15,7 +15,7 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <com.fasterxml.jackson.version>2.9.9</com.fasterxml.jackson.version>
+        <com.fasterxml.jackson.version>2.9.10.8</com.fasterxml.jackson.version>
     </properties>
 
     <dependencyManagement>
